@@ -1,6 +1,5 @@
 "use client"
 import Image from "next/image";
-import { Pattern } from "../page";
 import { useTheme } from 'next-themes'
 
 export default function Card() {
@@ -48,5 +47,11 @@ export default function Card() {
         </button>
       </div>
     </div>
+  );
+}
+
+export function Pattern() {
+  return (
+    <div className="dark:bg-[repeating-linear-gradient(315deg,var(--pattern-fg1)_0,var(--pattern-fg1)_2px,transparent_0,transparent_50%)]  absolute inset-x-0 w-full h-full bg-[repeating-linear-gradient(315deg,var(--pattern-fg)_0,var(--pattern-fg)_2px,transparent_0,transparent_50%)] bg-size-[10px_10px] bg-fixed  pointer-events-none mask-l-from-0% mask-b-from-0%   mask-t-from-0%  mask-r-from-0%"></div>
   );
 }
