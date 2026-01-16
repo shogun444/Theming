@@ -1,10 +1,11 @@
 import cn from "@/app/utils/utils";
 import { Brain, Native, Note } from "./svgs";
 import Chats from "./Chats";
+import Animations from "./animation";
 
 export default function Bento() {
   return (
-    <div className="grid grid-cols-1  md:grid-cols-2 rounded-lg p-px bg-white">
+    <div className="h-screen grid grid-cols-1  md:grid-cols-2 rounded-lg p-px bg-white">
       <Card classname="md:border-r border-neutral-300">
         <CardHeader>
           <Brain /> LLM Model Selector
@@ -41,7 +42,7 @@ export default function Bento() {
           tools used, outcomes, and timestamps.
         </CardBody>
         <CardSkeleton>
-          <></>
+          <Animations/>
         </CardSkeleton>
       </Card>
     </div>
@@ -68,7 +69,7 @@ export function CardHeader({
   return (
     <div
       className={cn(
-        "flex items-center text-sm text-neutral-800 font-medium",
+        "flex items-center  text-neutral-800 font-medium",
         className
       )}
     >
@@ -84,7 +85,7 @@ export function CardBody({
   children: React.ReactNode;
 }) {
   return (
-    <div className={cn("text-xs text-neutral-600 font-medium pt-5", className)}>
+    <div className={cn("text-sm text-neutral-600 font-medium pt-5", className)}>
       {children}
     </div>
   );
@@ -103,7 +104,7 @@ export function CardSkeleton({
     //   backgroundSize : "10px 10px"
     // }}
       className={cn(
-        "mx-auto my-2 bg-neutral-50  mask-radial-from-82% rounded-md  text-neutral-800 h-40 text-sm ",
+        "mx-auto my-2 bg-neutral-50  mask-radial-from-82% rounded-md  text-neutral-800 h-60 text-sm ",
         className
       )}
     >

@@ -4,14 +4,14 @@ import { Native, Send } from "./svgs";
 export default function Chats() {
   return (
     <>
-<div className="overflow-y-auto h-25 mask-y-from-70%">
+<div className="overflow-y-auto h-45 mask-y-from-70% px-2">
      <Card>Hello, how are you?</Card>
      <AICard>I'm good, thank you! How can I help you today?</AICard>
 </div>
   
-      <div className="m-4 flex justify-between px-10 w-90 rounded-md shadow-input mx-auto items-center h-10">
-        <input type="text" placeholder="Ask Nouts AI" />
-        <div className="flex">
+      <div className="mx-auto relative m-4 flex justify-center bg  w-full rounded-md items-center ">
+        <input className="h-10 w-[calc(100%-4rem)] rounded-md pl-5 shadow-input" type="text" placeholder="Ask Nouts AI" />
+        <div className="flex absolute inset-x-0 translate-x-80 gap-5 cursor-pointer">
           <Send />
         </div>
       </div>

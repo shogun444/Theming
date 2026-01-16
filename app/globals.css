@@ -33,6 +33,7 @@
     0px 0px 0px 1px rgba(107, 109, 113, 0.08);
   --pattern-fg: rgba(199, 179, 179, 0.8);
   --pattern-fg1: rgba(127, 103, 103, 0.1);
+  --color-line: black;
 }
 .dark {
   --background: #111010;
