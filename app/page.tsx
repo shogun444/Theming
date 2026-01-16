@@ -3,14 +3,16 @@ import Hero from "./Components/Hero";
 import Navbar from "./Components/Navbar";
 import Card from "./Components/Card";
 import ModeToggle from "./Components/Project/modetoggle";
+import Bento from "./Components/Project/bento";
 
 export default function Home() {
   return (
-    <div className="h-screen w-full dark:bg-neutral-900 bg-neutral-50 md:p-2 relative ">
+    <div className="h-screen max-w-4xl mx-auto dark:bg-neutral-900 bg-neutral-100 md:p-2 relative ">
       {/* <Hero/> */}
       {/* <Navbar/> */}
       {/* <Card /> */}
       <ModeToggle/>
+      <Bento/>
     </div>
   );
 }

@@ -28,6 +28,9 @@
   --shadow-input: 0px 2px 3px -1px rgba(0, 0, 0, 0.1),
     0px 1px 0px 0px rgba(25, 28, 33, 0.02),
     0px 0px 0px 1px rgba(25, 28, 33, 0.08);
+  --shadow-dark: 0px 2px 3px -1px rgba(183, 170, 170, 0.1),
+    0px 1px 0px 0px rgba(168, 172, 176, 0.02),
+    0px 0px 0px 1px rgba(107, 109, 113, 0.08);
   --pattern-fg: rgba(199, 179, 179, 0.8);
   --pattern-fg1: rgba(127, 103, 103, 0.1);
 }
