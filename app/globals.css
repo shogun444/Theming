@@ -37,6 +37,7 @@
   --stop-topline: oklch(71.2% 0.194 13.428);
   --stop-middleline: oklch(68.5% 0.169 237.323);
   --stop-endline: oklch(85.2% 0.199 91.936);
+  --stop-coolline: oklch(75.971% 0.01569 94.275);
 }
 .dark {
   --background: #111010;

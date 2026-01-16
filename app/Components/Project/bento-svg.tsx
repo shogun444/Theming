@@ -329,8 +329,7 @@ export function BottomLine() {
       xmlns="http://www.w3.org/2000/svg"
       className="absolute left-44 top-4"
     >
-      <line y1="31" x2="170" y2="31" stroke="var(--color-line)">
-      </line>
+      <line y1="31" x2="170" y2="31" stroke="var(--color-line)"></line>
       <line
         x1="170.5"
         y1="30"
@@ -346,14 +345,14 @@ export function BottomLine() {
           gradientUnits="userSpaceOnUse"
           initial={{
             x1: "0%",
-            x2: "10%",
+            x2: "25%",
           }}
           animate={{
             x1: "80%",
-            x2: "90%",
+            x2: "100%",
           }}
           transition={{
-            duration: 1,
+            duration: 2,
             repeat: Infinity,
             ease: "easeInOut",
           }}
@@ -408,14 +407,14 @@ export function TopLine() {
           id="line-one-gradient"
           initial={{
             x1: "0%",
-            x2: "10%",
+            x2: "25%",
           }}
           animate={{
             x1: "80%",
-            x2: "90%",
+            x2: "100%",
           }}
           transition={{
-            duration: 1,
+            duration: 2,
             ease: "easeInOut",
             repeat: Infinity,
           }}
@@ -433,59 +432,209 @@ export function TopLine() {
 export function Middle() {
   return (
     <svg
-      width="312"
-      height="33"
-      viewBox="0 0 312 33"
+      width="170"
+      height="2"
+      viewBox="0 0 170 2"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      className="absolute top-2 left-44 "
+      className="absolute top-2 left-43"
     >
       <line
-        x1="250"
-        y1="0"
-        x2="250.5"
-        y2="0"
-        stroke="var(--color-line)"
-        strokeLinecap="round"
-      ></line>
-      <line
-        x1="250"
-        y1="32"
-        x2="250.5"
-        y2="32"
-        stroke="var(--color-line)"
-        strokeLinecap="round"
-      ></line>
-      <line
-        x1="3"
+        x1="0.5"
         y1="1"
-        x2="250.5"
-        y2="2"
-        stroke="url(#line-one-gradient)"
+        x2="302.5"
+        y2="1"
+        stroke="var(--color-line)"
+        strokeLinecap="round"
+      ></line>
+      <line
+        x1="0.5"
+        y1="1"
+        x2="302.5"
+        y2="1"
+        stroke="url(#line-two-gradient)"
         strokeLinecap="round"
       ></line>
       <defs>
         <motion.linearGradient
           gradientUnits="userSpaceOnUse"
-          id="line-one-gradient"
+          id="line-two-gradient"
           initial={{
             x1: "0%",
-            x2: "10%",
+            x2: "25%",
           }}
           animate={{
             x1: "80%",
-            x2: "90%",
+            x2: "100%",
           }}
           transition={{
-            duration: 1,
-            repeat: Infinity,
+            duration: 2,
             ease: "easeInOut",
+            repeat: Infinity,
           }}
         >
           <stop stopColor="var(--color-line)"></stop>
           <stop offset="0.33" stopColor="var(--stop-middleline)"></stop>
           <stop offset="0.66" stopColor="var(--stop-middleline)"></stop>
           <stop offset="1" stopColor="var(--color-line)"></stop>
+        </motion.linearGradient>
+      </defs>
+    </svg>
+  );
+}
+
+export function ConnectedLine() {
+  return (
+    <svg
+      width="140"
+      height="2"
+      viewBox="0 0 135 2"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className="absolute top-2 right-12"
+    >
+      <line
+        x1="0.5"
+        y1="1"
+        x2="302.5"
+        y2="1"
+        stroke="var(--color-line)"
+        strokeLinecap="round"
+      ></line>
+      <line
+        x1="0.5"
+        y1="1"
+        x2="302.5"
+        y2="1"
+        stroke="url(#line-two-gradient)"
+        strokeLinecap="round"
+      ></line>
+      <defs>
+        <motion.linearGradient
+          gradientUnits="userSpaceOnUse"
+          id="line-two-gradient"
+          initial={{
+            x1: "0%",
+            x2: "2%",
+          }}
+          animate={{
+            x1: "86%",
+            x2: "88%",
+          }}
+          transition={{
+            duration: 3,
+            ease: "easeInOut",
+            repeat: Infinity,
+            delay: 2,
+          }}
+        >
+          <stop stopColor="var(--color-line)"></stop>
+          <stop offset="0.2" stopColor="var(--stop-middleline)"></stop>
+          <stop offset="0.23" stopColor="var(--stop-topline)"></stop>
+          <stop offset="1" stopColor="var(--color-line)"></stop>
+        </motion.linearGradient>
+      </defs>
+    </svg>
+  );
+}
+
+export function ConnectedLine2() {
+  return (
+    <svg
+      width="250"
+      height="2"
+      viewBox="0 0 250 2"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className="absolute top-2 -right-60"
+    >
+      <line
+        x1="0.5"
+        y1="1"
+        x2="302.5"
+        y2="1"
+        stroke="var(--color-line)"
+        strokeLinecap="round"
+      ></line>
+      <line
+        x1="0.5"
+        y1="1"
+        x2="302.5"
+        y2="1"
+        stroke="url(#line-two-gradient)"
+        strokeLinecap="round"
+      ></line>
+      <defs>
+        <motion.linearGradient
+          gradientUnits="userSpaceOnUse"
+          id="line-two-gradient"
+          initial={{
+            x1: "0%",
+            x2: "2%",
+          }}
+          animate={{
+            x1: "86%",
+            x2: "88%",
+          }}
+          transition={{
+            duration: 1,
+            ease: "easeInOut",
+            repeat: Infinity,
+            delay: 2,
+          }}
+        >
+          <stop stopColor="var(--color-line)"></stop>
+          <stop offset="0.2" stopColor="var(--stop-topline)"></stop>
+          <stop offset="0.89" stopColor="var(--stop-topline)"></stop>
+          <stop offset="1" stopColor="var(--color-line)"></stop>
+        </motion.linearGradient>
+      </defs>
+    </svg>
+  );
+}
+export function Line() {
+  return (
+    <svg
+      width="2"
+      height="51"
+      viewBox="0 0 1 50"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className="shrink-0"
+    >
+      {/* base line */}
+      <line
+        y1="0"
+        x2="50"
+        y2="0"
+        transform="matrix(0 -1 -1 0 0 50)"
+        stroke="var(--color-line)"
+      />
+
+      {/* animated gradient line */}
+      <line
+        y1="0"
+        x2="50"
+        y2="0"
+        transform="matrix(0 -1 -1 0 0 50)"
+        stroke="url(#vertical-line-gradient)"
+      />
+
+      <defs>
+        <motion.linearGradient
+          id="vertical-line-gradient"
+          gradientUnits="objectBoundingBox"
+          initial={{ y1: "0%", y2: "5%" }}
+          animate={{ y1: "55%", y2: "100%" }}
+          transition={{
+            duration: 1,
+            ease: "easeInOut",
+            repeat: Infinity,
+          }}
+        >
+          <stop offset="0" stopColor="var(--stop-topline)" />
+          <stop offset="0.5" stopColor="var(--stop-topline)" />
+          <stop offset="1" stopColor="var(--color-line)" />
         </motion.linearGradient>
       </defs>
     </svg>
