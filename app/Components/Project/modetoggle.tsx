@@ -53,6 +53,15 @@ export default function ModeToggle() {
         </button>
         <button onClick={handle} className="cursor-pointer"></button>
       </nav>
+
+      {/* <div className="h-screen w-full flex justify-center items-center">
+  
+    <div className="bg-neutral-100 p-px h-10 w-10 rounded-md z-10 relative overflow-hidden">
+      <div className=" relative z-10 bg-neutral-50 h-full w-full rounded-md"></div>
+      <div className="absolute bg-conic-90 animate-spin scale-[1.2] from-blue-400 via-transparent to-transparent h-full w-full inset-0 rounded-md"></div>
+      <div className="absolute bg-conic-90 animate-spin scale-[1.2] from-amber-400 via-transparent to-transparent h-full w-full inset-0 rounded-md [animation-delay:0.4s]"></div>
+    </div>
+      </div> */}
     </>
   );
 }

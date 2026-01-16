@@ -1,3 +1,5 @@
+"use client";
+import { motion } from "motion/react";
 export function Notion() {
   return (
     <svg
@@ -327,7 +329,8 @@ export function BottomLine() {
       xmlns="http://www.w3.org/2000/svg"
       className="absolute left-44 top-4"
     >
-      <line y1="31" x2="170" y2="31" stroke="var(--color-line)"></line>
+      <line y1="31" x2="170" y2="31" stroke="var(--color-line)">
+      </line>
       <line
         x1="170.5"
         y1="30"
@@ -336,21 +339,30 @@ export function BottomLine() {
         stroke="var(--color-line)"
         strokeLinecap="round"
       ></line>
-      <line y1="0" x2="0" y2="0" stroke="url(#line-three-gradient)"></line>
+      <line y1="31" x2="170" y2="31" stroke="url(#line-three-gradient)"></line>
       <defs>
-        <linearGradient
+        <motion.linearGradient
           id="line-three-gradient"
           gradientUnits="userSpaceOnUse"
-          x1="-17.71018%"
-          x2="2.19823%"
-          y1="1"
-          y2="0"
+          initial={{
+            x1: "0%",
+            x2: "10%",
+          }}
+          animate={{
+            x1: "80%",
+            x2: "90%",
+          }}
+          transition={{
+            duration: 1,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
         >
           <stop stopColor="var(--color-line)"></stop>
-          <stop offset="0.33" stopColor="var(--color-yellow-500)"></stop>
-          <stop offset="0.66" stopColor="var(--color-yellow-500)"></stop>
+          <stop offset="0.33" stopColor="var(--stop-endline)"></stop>
+          <stop offset="0.66" stopColor="var(--stop-endline)"></stop>
           <stop offset="1" stopColor="var(--color-line)"></stop>
-        </linearGradient>
+        </motion.linearGradient>
       </defs>
     </svg>
   );
@@ -391,19 +403,28 @@ export function TopLine() {
         strokeLinecap="round"
       ></line>
       <defs>
-        <linearGradient
+        <motion.linearGradient
           gradientUnits="userSpaceOnUse"
           id="line-one-gradient"
-          x1="-19.00295%"
-          x2="0.95717%"
-          y1="1"
-          y2="0"
+          initial={{
+            x1: "0%",
+            x2: "10%",
+          }}
+          animate={{
+            x1: "80%",
+            x2: "90%",
+          }}
+          transition={{
+            duration: 1,
+            ease: "easeInOut",
+            repeat: Infinity,
+          }}
         >
           <stop stopColor="var(--color-line)"></stop>
-          <stop offset="0.33" stopColor="#F17463"></stop>
-          <stop offset="0.66" stopColor="#F17463"></stop>
+          <stop offset="0.33" stopColor="var(--stop-topline)"></stop>
+          <stop offset="0.66" stopColor="var(--stop-topline)"></stop>
           <stop offset="1" stopColor="var(--color-line)"></stop>
-        </linearGradient>
+        </motion.linearGradient>
       </defs>
     </svg>
   );
@@ -420,43 +441,52 @@ export function Middle() {
       className="absolute top-2 left-44 "
     >
       <line
-        x1="0.5"
-        y1="1"
+        x1="250"
+        y1="0"
         x2="250.5"
-        y2="1"
+        y2="0"
         stroke="var(--color-line)"
         strokeLinecap="round"
       ></line>
       <line
         x1="250"
-        y1="1"
+        y1="32"
         x2="250.5"
         y2="32"
         stroke="var(--color-line)"
         strokeLinecap="round"
       ></line>
       <line
-        x1="0.5"
+        x1="3"
         y1="1"
         x2="250.5"
-        y2="1"
+        y2="2"
         stroke="url(#line-one-gradient)"
         strokeLinecap="round"
       ></line>
       <defs>
-        <linearGradient
+        <motion.linearGradient
           gradientUnits="userSpaceOnUse"
           id="line-one-gradient"
-          x1="-19.00295%"
-          x2="0.95717%"
-          y1="1"
-          y2="0"
+          initial={{
+            x1: "0%",
+            x2: "10%",
+          }}
+          animate={{
+            x1: "80%",
+            x2: "90%",
+          }}
+          transition={{
+            duration: 1,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
         >
           <stop stopColor="var(--color-line)"></stop>
-          <stop offset="0.33" stopColor="#F17463"></stop>
-          <stop offset="0.66" stopColor="#F17463"></stop>
+          <stop offset="0.33" stopColor="var(--stop-middleline)"></stop>
+          <stop offset="0.66" stopColor="var(--stop-middleline)"></stop>
           <stop offset="1" stopColor="var(--color-line)"></stop>
-        </linearGradient>
+        </motion.linearGradient>
       </defs>
     </svg>
   );

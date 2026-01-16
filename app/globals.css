@@ -33,7 +33,10 @@
     0px 0px 0px 1px rgba(107, 109, 113, 0.08);
   --pattern-fg: rgba(199, 179, 179, 0.8);
   --pattern-fg1: rgba(127, 103, 103, 0.1);
-  --color-line: black;
+  --color-line: oklch(70.8% 0 0);
+  --stop-topline: oklch(71.2% 0.194 13.428);
+  --stop-middleline: oklch(68.5% 0.169 237.323);
+  --stop-endline: oklch(85.2% 0.199 91.936);
 }
 .dark {
   --background: #111010;
