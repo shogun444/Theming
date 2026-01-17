@@ -99,10 +99,10 @@ export function CardSkeleton({
 }) {
   return (
     <div
-    // style={{
-    //   backgroundImage : 'radial-gradient(oklch(86.9% 0.005 56.366) 1px,transparent 1px)',
-    //   backgroundSize : "10px 10px"
-    // }}
+    style={{
+      backgroundImage : 'radial-gradient(oklch(86.9% 0.005 56.366) 1px,transparent 1px)',
+      backgroundSize : "10px 10px"
+    }}
       className={cn(
         "mx-auto my-2 bg-neutral-50  mask-radial-from-82% rounded-md  text-neutral-800 h-60 text-sm ",
         className

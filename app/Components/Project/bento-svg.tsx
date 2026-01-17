@@ -530,7 +530,7 @@ export function ConnectedLine() {
         >
           <stop stopColor="var(--color-line)"></stop>
           <stop offset="0.2" stopColor="var(--stop-middleline)"></stop>
-          <stop offset="0.23" stopColor="var(--stop-topline)"></stop>
+          <stop offset="0.23" stopColor="var(--stop-middlelineline)"></stop>
           <stop offset="1" stopColor="var(--color-line)"></stop>
         </motion.linearGradient>
       </defs>
@@ -623,16 +623,16 @@ export function Line() {
       <defs>
         <motion.linearGradient
           id="vertical-line-gradient"
-          gradientUnits="objectBoundingBox"
-          initial={{ y1: "0%", y2: "5%" }}
-          animate={{ y1: "55%", y2: "100%" }}
+          gradientUnits="userSpaceOnUse"
+          initial={{ y1: "0%", y2: "2%" }}
+          animate={{ y1: "80%", x2: "100%" }}
           transition={{
-            duration: 1,
+            duration: 2,
             ease: "easeInOut",
             repeat: Infinity,
           }}
         >
-          <stop offset="0" stopColor="var(--stop-topline)" />
+          <stop stopColor="var(--stop-topline)" />
           <stop offset="0.5" stopColor="var(--stop-topline)" />
           <stop offset="1" stopColor="var(--color-line)" />
         </motion.linearGradient>
