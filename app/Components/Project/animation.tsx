@@ -16,6 +16,7 @@ import {
   ConnectedLine,
   ConnectedLine2,
   Line,
+  Maxline,
 } from "./bento-svg";
 
 export default function Animations() {
@@ -66,7 +67,7 @@ export default function Animations() {
       </div>
       <div className="h-8 w-8 absolute top-28 right-40 bg-neutral-50 rounded-md shadow-input flex items-center justify-center">
         <div className="absolute -top-13">
-          <Line />
+          <Maxline/>
         </div>
 
         <Rainbow />

@@ -529,8 +529,8 @@ export function ConnectedLine() {
           }}
         >
           <stop stopColor="var(--color-line)"></stop>
-          <stop offset="0.2" stopColor="var(--stop-middleline)"></stop>
-          <stop offset="0.23" stopColor="var(--stop-middlelineline)"></stop>
+          <stop offset="0.33" stopColor="var(--stop-middleline)"></stop>
+          <stop offset="0.66" stopColor="var(--stop-middlelineline)"></stop>
           <stop offset="1" stopColor="var(--color-line)"></stop>
         </motion.linearGradient>
       </defs>
@@ -561,13 +561,13 @@ export function ConnectedLine2() {
         y1="1"
         x2="302.5"
         y2="1"
-        stroke="url(#line-two-gradient)"
+        stroke="url(#line-twogradient)"
         strokeLinecap="round"
       ></line>
       <defs>
         <motion.linearGradient
           gradientUnits="userSpaceOnUse"
-          id="line-two-gradient"
+          id="line-twogradient"
           initial={{
             x1: "0%",
             x2: "2%",
@@ -577,15 +577,15 @@ export function ConnectedLine2() {
             x2: "88%",
           }}
           transition={{
-            duration: 1,
+            duration: 2,
             ease: "easeInOut",
             repeat: Infinity,
-            delay: 2,
+            
           }}
         >
           <stop stopColor="var(--color-line)"></stop>
-          <stop offset="0.2" stopColor="var(--stop-topline)"></stop>
-          <stop offset="0.89" stopColor="var(--stop-topline)"></stop>
+          <stop offset="0.2" stopColor="var(--stop-middleline)"></stop>
+          <stop offset="0.5" stopColor="var(--stop-middleline)"></stop>
           <stop offset="1" stopColor="var(--color-line)"></stop>
         </motion.linearGradient>
       </defs>
@@ -625,7 +625,7 @@ export function Line() {
           id="vertical-line-gradient"
           gradientUnits="userSpaceOnUse"
           initial={{ y1: "0%", y2: "2%" }}
-          animate={{ y1: "80%", x2: "100%" }}
+          animate={{ y1: "80%", y2: "100%" }}
           transition={{
             duration: 2,
             ease: "easeInOut",
@@ -638,5 +638,52 @@ export function Line() {
         </motion.linearGradient>
       </defs>
     </svg>
+  );
+}
+
+export function Maxline() {
+  return (
+    <>
+      <svg
+        width="2"
+        height="70"
+        viewBox="0 0 1 70"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        className="shrink-0"
+      >
+        <line
+          y1="0.5"
+          x2="80"
+          y2="-0.5"
+          transform="matrix(0 -1 -1 0 0 80.5)"
+          stroke="var(--color-line)"
+        ></line>
+        <line
+          y1="-0.5"
+          x2="90"
+          y2="-0.5"
+          transform="matrix(0 -1 -1 0 0 80.5)"
+          stroke="url(#vertical-linegradient)"
+        ></line>
+        <defs> 
+          <motion.linearGradient
+            id="vertical-linegradient"
+            gradientUnits="userSpaceOnUse"
+            initial={{ y1: 0, y2: 10 }}
+            animate={{ y1: 50, y2: 74 }}
+            transition={{
+              duration: 3,
+              ease: "easeInOut",
+              repeat: Infinity,
+            }}
+          >
+            <stop stopColor="var(--stop-endline)"></stop>
+            <stop offset="0.5" stopColor="var(--stop-endline)"></stop>
+            <stop offset="1" stopColor="var(--color-line)"></stop>
+          </motion.linearGradient>
+        </defs>
+      </svg>
+    </>
   );
 }
