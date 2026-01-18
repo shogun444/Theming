@@ -5,6 +5,7 @@ import Card from "./Components/Card";
 import ModeToggle from "./Components/Project/modetoggle";
 import Bento from "./Components/Project/bento";
 import Gradient from "./Components/Project/gradeint-button";
+import ImageHover from "./Components/Project/ImageHover";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <ModeToggle/>
       <Bento/>
       <Gradient/>
+      <ImageHover/>
     </div>
   );
 }
