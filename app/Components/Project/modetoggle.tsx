@@ -8,7 +8,7 @@ export default function ModeToggle() {
   }
   return (
     <>
-      <nav className="flex w-2xl mx-auto mb-4 gap-5 shadow-input rounded-md p-1 dark:shadow-dark">
+      <nav className="flex w-full md:w-2xl mx-auto mb-4 gap-5 shadow-input rounded-md p-1 dark:shadow-dark">
         <button
           onClick={handle}
           className="cursor-pointer  dark:text-neutral-200 shadow-input dark:bg-neutral-700 p-1 rounded-lg bg-neutral-100 text-neutral-700"

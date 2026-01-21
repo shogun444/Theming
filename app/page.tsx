@@ -11,7 +11,7 @@ import NextLevelGrid from "./Components/NextLevelGrid/page";
 
 export default function Home() {
   return (
-    <div className="min-h-screen max-w-4xl mx-auto dark:bg-neutral-900 bg-gray-200 md:p-2 relative ">
+    <div className="min-h-screen w-full md:max-w-4xl mx-auto dark:bg-neutral-900 bg-gray-200 md:p-2 relative ">
       {/* <Hero/> */}
       {/* <Navbar/> */}
       {/* <Card /> */}
