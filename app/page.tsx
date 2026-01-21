@@ -7,6 +7,7 @@ import Bento from "./Components/Project/bento";
 import Gradient from "./Components/Project/gradeint-button";
 import ImageHover from "./Components/Project/ImageHover";
 import Form from "./Components/Hover States/form";
+import NextLevelGrid from "./Components/NextLevelGrid/page";
 
 export default function Home() {
   return (
@@ -14,11 +15,13 @@ export default function Home() {
       {/* <Hero/> */}
       {/* <Navbar/> */}
       {/* <Card /> */}
-      <ModeToggle/>
-      <Form/>
+     <ModeToggle/>
+      {/* <Form/>
       <Bento/>
       <Gradient/>
-      <ImageHover/>
+      <ImageHover/> 
+       */}
+      <NextLevelGrid/>
 
     </div>
   );

@@ -3,7 +3,7 @@ import cn from "@/app/utils/utils";
 export default function Form() {
   return (
     <>
-      <div className="w-full h-full text-center">
+      <div className="w-full min-h-screen text-center selection:bg-black selection:text-white">
         <span className="text-2xl font-semibold bg-clip-text bg-linear-to-b from-neutral-800 to-neutral-700 text-transparent">
           This is a{" "}
           <span className="text-white z-10 after:-z-12 after:-skew-3 after:bg-red-500 after:absolute after:inset-0 relative">
@@ -15,9 +15,9 @@ export default function Form() {
 
         <div className="  gap-3 my-5">
          
-             <LabelComponent  props={"First Name"}> 
+            <LabelComponent  props={"First Name"}> 
             <FormComponent type="string" placeholder="First Name"></FormComponent>
-          </LabelComponent>
+          </LabelComponent> 
         
          
             <LabelComponent  props={"Last Name"}> 
