@@ -6,17 +6,20 @@ import ModeToggle from "./Components/Project/modetoggle";
 import Bento from "./Components/Project/bento";
 import Gradient from "./Components/Project/gradeint-button";
 import ImageHover from "./Components/Project/ImageHover";
+import Form from "./Components/Hover States/form";
 
 export default function Home() {
   return (
-    <div className="min-h-screen max-w-4xl mx-auto dark:bg-neutral-900 bg-neutral-100 md:p-2 relative ">
+    <div className="min-h-screen max-w-4xl mx-auto dark:bg-neutral-900 bg-gray-200 md:p-2 relative ">
       {/* <Hero/> */}
       {/* <Navbar/> */}
       {/* <Card /> */}
       <ModeToggle/>
+      <Form/>
       <Bento/>
       <Gradient/>
       <ImageHover/>
+
     </div>
   );
 }
